@@ -1,18 +1,9 @@
 import time
-import pygame
 import winsound
 import numpy as np
-pygame.mixer.init()
 freq = 880 #Hz, no. of waves per second 
-#br = 44100 #no. of frames per second
 code = {'-':'dah','.':['dit','di']}
 dur={'dah': 750, 'di': 400, 'dit': 300}
-'''samp = {}
-#wavevalues=0
-for k in length.keys():
-    #print k
-    samp[k]=length[k]*br
-print samp'''
 morse_code = {'a':'.-','b':'-...','c':'-.-.',
               'd':'-..','e':'.','f':'..-.',
               'g':'--.','h':'....','i':'..',
@@ -29,22 +20,6 @@ morse_code = {'a':'.-','b':'-...','c':'-.-.',
 #...............sound generation............#
 def playsound(sound):
     winsound.Beep(freq,dur[sound])
-    '''filename = sound+'.wav'
-    print filename'''
-    #endval = int(samp[sound])
-    '''#print endval
-    timeinst = np.arange(0,endval,1)
-    #print timeinst
-    wavevalues = 10*np.ones(endval,dtype=int)
-    print wavevalues'''
-    #plt.plot(wavevalues)
-    #plt.show()
-    '''f=wave.open(filename,'w')
-    f.setparams((1,2,br,endval,"NONE","Uncompressed"))
-    f.writeframes(wavevalues)
-    f.close()
-    pygame.mixer.music.load(filename)
-    pygame.mixer.music.play()'''
 #..............text 2 morse.................#
 def text2morse(string):
     morsecode = ''
@@ -95,5 +70,3 @@ while(1):
     if option != '1':
         break
 #.........................
-#text2morse('.')
-#playsound('dah')
