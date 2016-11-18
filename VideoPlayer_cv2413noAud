@@ -1,0 +1,24 @@
+#Author: Siladittya Manna
+#bet: Alphabet or Number; Single Character; String Format
+#path: Path of the subfolders containing the Video
+#Basepath: PROJECT folder contains all the subfolders
+#OpenCV 2.4.13
+
+import cv2, time
+Basepath = "H:\PROJECT\\"
+vidext = ".mp4"
+def VideoPlay(bet,path):
+    Vidbet = Basepath+path+bet+vidext 
+    cap = cv2.VideoCapture(Vidbet)
+    while cap.isOpened():
+        ret,frame = cap.read()
+        if not ret:
+            break
+        time.sleep(0.05)
+        cv2.namedWindow(bet,cv2.WND_PROP_FULLSCREEN)
+        cv2.setWindowProperty(bet,cv2.WND_PROP_FULLSCREEN,cv2.cv.CV_WINDOW_FULLSCREEN)
+        cv2.imshow(bet,frame)
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+    cap.release()
+    cv2.destroyAllWindows()
