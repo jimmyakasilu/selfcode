@@ -1,7 +1,9 @@
+#Author: Siladittya Manna
+
 import urllib2,urlparse,os,sys
 from bs4 import BeautifulSoup
-download_path = 'I:\ISI\Self\MIT_Math_for_Comp_Sc'
-url='https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-spring-2015/lecture-slides/'
+download_path = '.....................' #Enter Download Path here
+url='https://...............' #Enter URL of the page from which to download
 page = urllib2.urlopen(url)
 html = page.read()
 i=0
