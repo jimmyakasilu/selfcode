@@ -1,3 +1,5 @@
+#Author:Siladittya Manna
+#Date:2/26/2017
 import Tkinter as tk
 import tkFileDialog
 import os,math
