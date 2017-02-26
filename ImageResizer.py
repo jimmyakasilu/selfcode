@@ -17,7 +17,6 @@ def openpath():
     if filename != None:
         print 'Success'
         print filename
-        #filepath = filename
         file_name.set(filename)
         return filename
 def ImageResize(event):
@@ -27,7 +26,6 @@ def ImageResize(event):
         print picw,pich
     except:
         print "Enter valid Dimensions..."
-    #print picw,pich
     #Image Resizing
     try:
         src = Image.open(filepath)
@@ -42,11 +40,6 @@ def ImageResize(event):
     dirname = '/'.join(path[:-1])
     fname = fname+'NEW'+'.'+'jpeg'
     imgo = '/'.join([dirname,fname])
-    #print pathname
-    #print path
-    #print fname
-    #print dirname
-    #print imgo
     dst = src.resize((picw,pich))
     dst.save(imgo,"JPEG")
 #main.overrideredirect(1)
