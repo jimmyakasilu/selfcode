@@ -1,5 +1,9 @@
-import os,arxiv
-
+import os
+try:
+	import arxiv
+except:
+	os.system("python -m pip install arxiv")
+	import arxiv
 query_string = input("Enter Query: ")
 cwd = os.getcwd()
 print(cwd)
