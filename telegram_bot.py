@@ -1,6 +1,6 @@
 import requests
 
-access_token = '1094213176:AAFPM2lzoWH_fvQXgDjUtluJCctamMp5Ax0'
+access_token = '***INSER YOUR ACCESS TOKEN HERE***'
 
 class TGBot(object):
 	def __init__(self, access_token):
@@ -29,6 +29,5 @@ class TGBot(object):
 if __name__ == '__main__':
 	bot = TGBot(access_token)
 	bot.get_chat_id()
-	bot.send_message('Hurray!!')
-	bot.send_photo('/mnt/d/bracelet2.JPG') 
-	#Appropriate file name for windows needs to be given
+	bot.send_message('***ENTER YOUR MESSAGE HERE***')
+	bot.send_photo('***ENTER FILE PATH HERE***') 
